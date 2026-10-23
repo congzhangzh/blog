@@ -1,10 +1,11 @@
-baseURL = "https://congzhangzh.github.io/"
+baseURL = "https://congzhang.li/"
 title = "Cong Zhang"
 theme = "PaperMod"
 
+# Served at https://congzhang.li (custom domain of this repo's Pages site).
+# The project sites stay on congzhangzh.github.io/<project>, because the user
+# site congzhangzh.github.io has no custom domain of its own.
 # English is served at the site root, Chinese under /zh/.
-# Never create top-level sections named like a project site
-# (freerdp-web, rdp-release-kit, hello_ai): they would shadow it.
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 hasCJKLanguage = true
