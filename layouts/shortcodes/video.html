@@ -1,0 +1,10 @@
+{{- /* Plays a video from the page bundle: {{< video src="demo.mp4" poster="demo.jpg" caption="..." >}} */ -}}
+{{- $src := .Page.Resources.Get (.Get "src") -}}
+{{- $poster := "" -}}
+{{- with .Get "poster" -}}{{- with $.Page.Resources.Get . -}}{{- $poster = .RelPermalink -}}{{- end -}}{{- end -}}
+<figure>
+  <video controls playsinline preload="metadata" style="width:100%;height:auto"{{ with $poster }} poster="{{ . }}"{{ end }}>
+    <source src="{{ $src.RelPermalink }}" type="{{ $src.MediaType }}">
+  </video>
+  {{- with .Get "caption" }}<figcaption>{{ . }}</figcaption>{{ end }}
+</figure>
